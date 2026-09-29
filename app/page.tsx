@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { BASE_PATH } from "../basePath";
+import PhotoCarousel, { type Photo } from "./PhotoCarousel";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -48,13 +48,7 @@ function YouTubeIcon() {
 
 const BOOKING_EMAIL = "AH.SP.booking@gmail.com";
 
-type PressPhoto = {
-  id: number;
-  imageUrl: string;
-  alt: string;
-};
-
-const PRESS_PHOTOS: PressPhoto[] = [
+const PRESS_PHOTOS: Photo[] = [
   {
     id: 1,
     imageUrl: `${BASE_PATH}/piano1.jpeg`,
@@ -85,6 +79,16 @@ const PRESS_PHOTOS: PressPhoto[] = [
     imageUrl: `${BASE_PATH}/piano4.jpeg`,
     alt: "Andrew playing keyboard in profile, a close-up shallow-focus shot under pink and green stage lights",
   },
+  {
+    id: 7,
+    imageUrl: `${BASE_PATH}/sax3.jpeg`,
+    alt: "Andrew playing saxophone on stage, centered, looking off to the left"
+  },
+  {
+    id: 8,
+    imageUrl: `${BASE_PATH}/sax4.jpeg`,
+    alt: "Side profile of Andrew playing saxophone on stage behind a keyboard"
+  }
 ];
 
 type Video = {
@@ -189,13 +193,7 @@ export default function EpkPage() {
         {PRESS_PHOTOS.length === 0 ? (
           <p className={styles.empty}>Press photos coming soon.</p>
         ) : (
-          <ul className={styles.photoGrid}>
-            {PRESS_PHOTOS.map((photo) => (
-              <li key={photo.id}>
-                <Image src={photo.imageUrl} alt={photo.alt} fill />
-              </li>
-            ))}
-          </ul>
+          <PhotoCarousel photos={PRESS_PHOTOS} />
         )}
       </section>
 

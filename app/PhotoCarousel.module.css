@@ -1,0 +1,73 @@
+.viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 2rem,
+    #000 calc(100% - 2rem),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 2rem,
+    #000 calc(100% - 2rem),
+    transparent
+  );
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: scroll 60s linear infinite;
+}
+
+.viewport:hover .track,
+.viewport:focus-within .track {
+  animation-play-state: paused;
+}
+
+/* Spacing lives on each item (not `gap`) so the two copies of the list are
+   exactly equal widths and translating by -50% loops seamlessly. */
+.item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 220px;
+  aspect-ratio: 3 / 4;
+  margin-right: 0.5rem;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.item img {
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 560px) {
+  .item {
+    width: 160px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viewport {
+    overflow-x: auto;
+  }
+
+  .track {
+    animation: none;
+  }
+
+  .item[aria-hidden="true"] {
+    display: none;
+  }
+}
