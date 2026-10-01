@@ -9,6 +9,14 @@ export default function Header() {
         <a href="https://saxypandabear.github.io/" className={styles.brand}>
           Andrew Huynh
         </a>
+        <a
+          href="https://linktr.ee/saxypandabear"
+          className={styles.link}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Linktree
+        </a>
       </nav>
     </header>
   );
