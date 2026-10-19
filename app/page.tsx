@@ -126,7 +126,7 @@ export default function EpkPage() {
 
       <section className={styles.section}>
         <p className={styles.bio}>
-          Richmond, VA-based saxophonist and pianist.
+          Richmond, VA-based <b>saxophonist</b> and <b>pianist</b>.
           <br />
           <br />
           Andrew can be found throughout the city performing with several of

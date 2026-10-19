@@ -22,7 +22,7 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav} aria-label="Primary">
         <a href="https://saxypandabear.github.io/" className={styles.brand}>
-          Andrew Huynh
+          Andrew Huynh: Sax & Piano
         </a>
         <a
           href="https://linktr.ee/saxypandabear"
