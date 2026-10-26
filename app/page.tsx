@@ -132,7 +132,7 @@ export default function EpkPage() {
           Andrew can be found throughout the city performing with several of
           Richmond&apos;s favorite artists. From intimate private events, trio
           shows, full band shows, to jam sessions, his repertoire spans jazz,
-          funk, Motown, rock, and even ska. Andrew can often be found at The
+          funk, pop, Motown, and even ska. Andrew can often be found at The
           Reveler, The Camel, Get Tight Lounge, and River City Roll, and has
           recently even joined RVA favorites <em>
             What&apos;s Our Age Again
