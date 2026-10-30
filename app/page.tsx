@@ -88,6 +88,16 @@ const PRESS_PHOTOS: Photo[] = [
     id: 8,
     imageUrl: `${BASE_PATH}/sax4.jpeg`,
     alt: "Side profile of Andrew playing saxophone on stage behind a keyboard"
+  },
+  {
+    id: 9,
+    imageUrl: `${BASE_PATH}/sax5.jpeg`,
+    alt: "Andrew playing saxophone into a microphone, standing in front of a keyboard"
+  },
+  {
+    id: 10,
+    imageUrl: `${BASE_PATH}/trio1.jpeg`,
+    alt: "Greyscale photo of Andrew playing saxophone with his trio group"
   }
 ];
 
